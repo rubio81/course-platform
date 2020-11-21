@@ -1,11 +1,11 @@
-:host{
-    display:flex;
+:host {
+	display: flex;
 
-    .sidebar{
-        flex: 3;
-    }
+	.sidebar {
+		flex: 3;
+	}
 
-    .content{
-        flex: 7;
-    }
+	.content {
+		flex: 7;
+	}
 }

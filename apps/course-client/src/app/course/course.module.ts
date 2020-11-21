@@ -5,12 +5,8 @@ import { CourseComponent } from './course.component';
 import { CourseRoutingModule } from './course.routing';
 import { SectionComponent } from './section/section.component';
 
-
 @NgModule({
-  imports: [
-    CommonModule,
-    CourseRoutingModule
-  ],
-  declarations: [CourseComponent, SectionComponent]
+	imports: [CommonModule, CourseRoutingModule],
+	declarations: [CourseComponent, SectionComponent],
 })
-export class CourseModule { }
+export class CourseModule {}
