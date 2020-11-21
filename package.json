@@ -64,6 +64,7 @@
     "tslint": "~6.0.0",
     "typescript": "~4.0.3",
     "cypress": "^5.5.0",
-    "@nrwl/cypress": "10.4.4"
+    "@nrwl/cypress": "10.4.4",
+    "@nrwl/node": "10.4.4"
   }
 }

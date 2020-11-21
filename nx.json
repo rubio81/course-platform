@@ -29,6 +29,19 @@
     "course-client-e2e": {
       "tags": [],
       "implicitDependencies": ["course-client"]
+    },
+    "course-client-lib": {
+      "tags": []
+    },
+    "course-admin": {
+      "tags": []
+    },
+    "course-admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["course-admin"]
+    },
+    "course-service": {
+      "tags": []
     }
   }
 }
