@@ -24,24 +24,27 @@
   },
   "projects": {
     "course-client": {
-      "tags": []
+      "tags": ["scope:course-client", "type:app"]
     },
     "course-client-e2e": {
-      "tags": [],
+      "tags": ["scope:course-client"],
       "implicitDependencies": ["course-client"]
     },
     "course-client-lib": {
-      "tags": []
+      "tags": ["scope:course-client", "type:data-access"]
     },
     "course-admin": {
-      "tags": []
+      "tags": ["scope:course-admin", "type:app"]
     },
     "course-admin-e2e": {
-      "tags": [],
+      "tags": ["scope:course-client"],
       "implicitDependencies": ["course-admin"]
     },
     "course-service": {
-      "tags": []
+      "tags": ["type:course-service"]
+    },
+    "shared-interfaces": {
+      "tags": ["scope:shared", "type:interface"]
     }
   }
 }

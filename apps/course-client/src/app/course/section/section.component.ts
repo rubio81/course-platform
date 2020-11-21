@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CourseSection } from '@course-platform/shared/interfaces';
 
 @Component({
   selector: 'course-platform-section',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section.component.scss']
 })
 export class SectionComponent implements OnInit {
-
+  
+  @Input() section: CourseSection;
   constructor() { }
 
   ngOnInit() {
