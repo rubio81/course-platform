@@ -6,26 +6,25 @@ parameters:
 steps:
   - task: Cache@2
     inputs:
-      key: yarn | $(Agent.OS) | yarn.lock
+      key: npm | $(Agent.OS) | package-lock.json
       restoreKeys: |
-        yarn | "$(Agent.OS)"
-        yarn
-      path: $(YARN_CACHE_FOLDER)
-    displayName: Cache Yarn packages
+        npm | "$(Agent.OS)"        
+      path: $(npm_config_cache)
+    displayName: Cache npm packages
 
   - task: Cache@2
     inputs:
-      key: cypress | $(Agent.OS) | yarn.lock
+      key: cypress | $(Agent.OS) | package-lock.json
       path: /home/vsts/.cache/Cypress
-      restoreKeys: cypress | $(Agent.OS) | yarn.lock
+      restoreKeys: cypress | $(Agent.OS) | package-lock.json
     displayName: Cache Cypress binary
     condition: eq('${{ parameters.installCypress }}', 'true')
 
   # Install Node dependencies
-  - script: yarn --frozen-lockfile
+  - script: npm ci
     condition: eq('${{ parameters.installCypress }}', 'true')
     displayName: 'Install NPM dependencies'
 
-  - script: CYPRESS_INSTALL_BINARY=0 yarn --frozen-lockfile
+  - script: CYPRESS_INSTALL_BINARY=0 npm install
     condition: eq('${{ parameters.installCypress }}', 'false')
     displayName: 'Install NPM dependencies'
