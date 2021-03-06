@@ -21,8 +21,8 @@ jobs:
         displayName: 'Download Build Artifacts'
         inputs:
           buildType: specific
-          project: 'f6995a74-0552-4d3b-b372-a80af3d9b89a'
-          pipeline: 6
+          project: '1da6e168-7f4d-4310-a107-b027ada4151a'
+          pipeline: 5
           tags: '$(LAST_PR_SHA)'
           downloadType: single
           artifactName: drop
