@@ -1,50 +1,53 @@
 {
-  "npmScope": "course-platform",
-  "affected": {
-    "defaultBase": "master"
-  },
-  "implicitDependencies": {
-    "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    ".eslintrc.json": "*",
-    "nx.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
-    }
-  },
-  "projects": {
-    "course-client": {
-      "tags": ["scope:course-client", "type:app"]
-    },
-    "course-client-e2e": {
-      "tags": ["scope:course-client"],
-      "implicitDependencies": ["course-client"]
-    },
-    "course-client-lib": {
-      "tags": ["scope:course-client", "type:data-access"]
-    },
-    "course-admin": {
-      "tags": ["scope:course-admin", "type:app"]
-    },
-    "course-admin-e2e": {
-      "tags": ["scope:course-client"],
-      "implicitDependencies": ["course-admin"]
-    },
-    "course-service": {
-      "tags": ["type:course-service"]
-    },
-    "shared-interfaces": {
-      "tags": ["scope:shared", "type:interface"]
-    }
-  }
+	"npmScope": "course-platform",
+	"affected": {
+		"defaultBase": "master"
+	},
+	"implicitDependencies": {
+		"angular.json": "*",
+		"package.json": {
+			"dependencies": "*",
+			"devDependencies": "*"
+		},
+		"tsconfig.base.json": "*",
+		"tslint.json": "*",
+		".eslintrc.json": "*",
+		"nx.json": "*"
+	},
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "@nrwl/workspace/tasks-runners/default",
+			"options": {
+				"cacheableOperations": ["build", "lint", "test", "e2e"]
+			}
+		}
+	},
+	"projects": {
+		"course-client": {
+			"tags": ["scope:course-client", "type:app"]
+		},
+		"course-client-e2e": {
+			"tags": ["scope:course-client"],
+			"implicitDependencies": ["course-client"]
+		},
+		"course-client-lib": {
+			"tags": ["scope:course-client", "type:data-access"]
+		},
+		"course-admin": {
+			"tags": ["scope:course-admin", "type:app"]
+		},
+		"course-admin-e2e": {
+			"tags": ["scope:course-client"],
+			"implicitDependencies": ["course-admin"]
+		},
+		"course-service": {
+			"tags": ["type:course-service"]
+		},
+		"shared-interfaces": {
+			"tags": ["scope:shared", "type:interface"]
+		},
+		"shared-util-util-feature-toggle": {
+			"tags": [ "scope:shared", "type:util" ]
+		}
+	}
 }
