@@ -16,13 +16,13 @@ describe('FeatureToggleService', () => {
 
 	describe('getFeatureFlags', () => {
 		it('should get feature flags', done => {
-			httpService.get.and.returnValue(of({ 'completed-todos': true }));
+			httpService.get.and.returnValue(of({ 'show-course': true }));
 
 			service
 				.getFeatureFlags('someId')
 				.pipe(first())
 				.subscribe(_ => {
-					const res = service.hasFlags('completed-todos');
+					const res = service.hasFlags('show-course');
 					expect(res).toBe(true);
 					done();
 				});
