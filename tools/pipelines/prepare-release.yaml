@@ -23,6 +23,7 @@ jobs:
           buildType: specific
           project: '1da6e168-7f4d-4310-a107-b027ada4151a'
           pipeline: 5
+          buildVersionToDownload: latest
           tags: '$(LAST_PR_SHA)'
           downloadType: single
           artifactName: drop
