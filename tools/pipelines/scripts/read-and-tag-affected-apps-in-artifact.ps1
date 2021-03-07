@@ -19,7 +19,7 @@ function addTagToGithubCommit {
 
 	$body = $request | ConvertTo-Json;
 	# TODO: create integration for creating tag in your version control provider
-	$tagsUri = "https://github.org/!api/2.0/repositories/todo-app/$repoSlug/refs/tags";
+	$tagsUri = "https://github.org/!api/2.0/repositories/course-platform/$repoSlug/refs/tags";
 
 	Write-Host "Sending request to Github"
 	Write-Host $tagsUri
